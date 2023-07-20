@@ -1,0 +1,13 @@
+Uuid: 94a3d90a77114b9da97f880dafdd0bb7
+ExtensionType: 1
+Name: Burptrast, Contrast Security Integration
+RepoName: burptrast
+ScreenVersion: TODO
+SerialVersion: 0
+MinPlatformVersion: 0
+ProOnly: False
+Author: TODO
+ShortDescription: TODO
+EntryPoint: build/libs/burptrast-all.jar
+BuildCommand: mvn package -DskipTests=true -Dmaven.javadoc.skip=true -B
+SupportedProducts: Pro, Community
