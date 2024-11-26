@@ -2,12 +2,12 @@ Uuid: 94a3d90a77114b9da97f880dafdd0bb7
 ExtensionType: 1
 Name: Burptrast, Contrast Security Integration
 RepoName: burptrast
-ScreenVersion: 1.3
-SerialVersion: 1
+ScreenVersion: 1.4
+SerialVersion: 2
 MinPlatformVersion: 0
-ProOnly: False
+ProOnly: True
 Author: Contrast Security OSS
 ShortDescription: Pulls endpoint information from Teamserver and import it into Burp's sitemap.
-EntryPoint: target/Burptrast-1.4-SNAPSHOT-jar-with-dependencies.jar
+EntryPoint: target/Burptrast-1.4-jar-with-dependencies.jar
 BuildCommand: mvn clean install -Dmaven.test.skip=true
-SupportedProducts: Pro, Community
+SupportedProducts: Pro
