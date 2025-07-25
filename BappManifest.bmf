@@ -3,7 +3,7 @@ ExtensionType: 1
 Name: Burptrast, Contrast Security Integration
 RepoName: burptrast
 ScreenVersion: 1.5.0
-SerialVersion: 4
+SerialVersion: 5
 MinPlatformVersion: 0
 ProOnly: True
 Author: Contrast Security OSS
