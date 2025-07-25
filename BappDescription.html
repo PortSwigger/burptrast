@@ -1,19 +1,26 @@
-<p>Burptrast is designed to pull endpoint information from Teamserver and import it into Burp's sitemap. The endpoints come from two sources.</p>
+<p>This extension integrates Burp Suite with Contrast Security's Teamserver (Assess), allowing users to import application metadata, endpoints, and vulnerability details directly into their Burp testing workflow.</p>
 
+<h2>Features</h2>
 <ul>
-	<li>Assess Vulnerability information.</li>
-	<li>Endpoints detected by the agent.</li>
+  <li>Imports endpoints discovered by Contrast Assess into Burp's site map.</li>
+  <li>Loads full HTTP requests associated with Assess vulnerabilities, including path parameters, methods, and request bodies.</li>
+  <li><strong>Live Browsing</strong>: Adds a correlation ID to proxied requests so that Assess can push detected vulnerabilities into Burp's Issues tab in near real-time.</li>
+  <li>Supports API-based authentication via YAML credentials file.</li>
+  <li>Compatible with both Contrast's full and community editions.</li>
+  <li>Respects Burp Suite's upstream and SOCKS proxy settings.</li>
 </ul>
 
-<p>The full HTTP Request that generated the Vulnerability is stored in TS and is available via the API. This is imported into Burp. While there is likely to be relatively few of these, they do have the advantage of having the information required to trigger the endpoint. Request/Path Params, Message Body etc. Endpoints detected by the agent will only have the Path and the HTTP Method.</p>
-
-<p>Live browsing</p>
-<p>Live Browsing when enabled, allows you to explore the application via the Burp proxy and get real time feedback from Assess. It works by adding a Correlation ID Header to every HTTP request, when a vulnerability is found in Assess that is linked to one of your HTTP requests, it is automatically added to the Burp Issue tab within a few seconds of the request being made, giving near realtime feedback of your exploration / pentest from Assess directly into your Burp UI.</p>
-<p>To use this feature you need to do the following.</p>
-<ul>
-	<li>Select the Application in the Application drop down.</li>
-	<li>Enable Live Browsing</li>
-	<li>Browse the application via the Burp Proxy</li>
-</ul>
-
-<p>For further usage instructions, please refer to the <a href="https://github.com/Contrast-Security-OSS/Burptrast">GitHub repository</a>.</p>
+<h2>Usage</h2>
+<ol>
+  <li>In the extension tab, upload a YAML file containing your Contrast credentials:
+    <ul>
+      <li><code class="InlineCode">api_key</code></li>
+      <li><code class="InlineCode">service_key</code></li>
+      <li><code class="InlineCode">user_name</code></li>
+      <li><code class="InlineCode">teamserver_url</code></li>
+    </ul>
+  </li>
+  <li>Select your application from the dropdown list.</li>
+  <li>Enable "Live Browsing" to automatically correlate proxied requests with Assess findings.</li>
+  <li>Browse the target application through Burp Proxy; endpoints and issues will populate in the site map and Issues tab.</li>
+</ol>
